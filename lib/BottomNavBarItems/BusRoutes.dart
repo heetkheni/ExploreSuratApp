@@ -1,5 +1,42 @@
-import 'package:explore_surat/BottomNavBarItems/BusRoutes.dart';
+import 'package:explore_surat/homepage.dart';
+import 'package:explore_surat/widgets/bottomnavigation.dart';
 import 'package:flutter/material.dart';
+
+class BusRoutes extends StatelessWidget {
+  const BusRoutes({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Row(
+          children: const [
+            Text(
+              "Bus Routes",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: const [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: CircleAvatar(
+              child: Icon(Icons.person),
+            ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigation(),
+    );
+  }
+}
 
 class BottomNavigation extends StatefulWidget {
   
@@ -9,15 +46,14 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
 
-  int selectedindex = 0;
+  int selectedindex = 2;
 
   void onTap(int index){
     setState(() {
       selectedindex=index;
-      if(index==2){
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => BusRoutes()));
-                
+      if(index==0){
+        Navigator.push(context,
+        MaterialPageRoute(builder: (context) => Homepage()));  
       }
     });
   }

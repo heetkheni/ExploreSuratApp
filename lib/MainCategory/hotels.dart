@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class CategoryList extends StatelessWidget {
-  const CategoryList({Key? key}) : super(key: key);
+class Hotel extends StatelessWidget {
+  const Hotel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class CategoryList extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Text("Mall"),
+            Text("Hotel"),
           ],
         ),
       ),

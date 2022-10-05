@@ -16,11 +16,10 @@ class _CarouselState extends State<Carousel> {
       child: CarouselSlider.builder(
           itemCount: 10,
           // options: CarouselOptions(aspectRatio: 1.2),
-
           options: CarouselOptions(
             height: 217.0,
             enlargeCenterPage: true,
-            autoPlay: true,
+            autoPlay: false,
             aspectRatio: 1 / 2,
             autoPlayCurve: Curves.linear,
             enableInfiniteScroll: true,
@@ -38,8 +37,9 @@ class _CarouselState extends State<Carousel> {
                       opacity: 20),
                   borderRadius: BorderRadius.circular(15)),
               height: 500,
-            );
-          }),
+          );
+        }
+      ),
     );
   }
 }
