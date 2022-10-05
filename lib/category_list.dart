@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+
+class CategoryList extends StatelessWidget {
+  const CategoryList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          children: [
+            SizedBox(
+              width: 10,
+            ),
+            Text("Mall"),
+          ],
+        ),
+      ),
+    );
+  }
+}
